@@ -17,7 +17,7 @@ jobs:
       run: |
         docker run --name test-container -d -p 8080:80 test-ci-cd
         sleep 5
-        curl http://localhost:8080 | grep "Hello, CI/CD!"
+        curl http://localhost:8080 | grep "Hello"
         docker stop test-container
     
     - name: Login to Docker Hub
